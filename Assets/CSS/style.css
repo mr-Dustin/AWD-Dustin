@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #ED0101, #0E49B5);
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 2rem;
+    }
+
+    .cardHolder {
+        display: grid;
+        justify-content: space-between;
+        gap: 1rem;
+        width: 90%;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 1rem;
+
+        .card {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            background: linear-gradient(
+                30deg,
+                #eb1719 0%,
+                #eb1719 42%,
+                #1c4571 42%,
+                #1c4571 45%,
+                #eb1719 45%,
+                #eb1719 48%,
+                #1c4571 48%,
+                #1c4571 51%,
+                #eb1719 51%,
+                #eb1719 54%,
+                #1c4571 54%,
+                #1c4571 57%,
+                #eb1719 57%,
+                #eb1719 60%,
+                #1c4571 60%,
+                #1c4571 100%
+            );
+            background-size: 300%;
+            box-shadow: 2px 3px 5px white;
+            transition: 0.5s ease-in-out;
+
+            .cardTitle {
+                color: white;
+                transition: 0.3s ease-in-out;
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+
+            &:hover {
+                animation: colorChange 0.3s ease-in-out;
+                box-shadow: 3px 5px 5px #eb1719;
+                background-position: 100%;
+
+                .cardTitle {
+                    color: #eb1719;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
