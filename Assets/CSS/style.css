@@ -1,14 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/akzidenzgrotesk');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'AkzidenzGrotesk', sans-serif; 
 }
 
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #ED0101, #0E49B5);
+    background-color:#4801ff;
     min-height: 100vh;
 }
 .container {
@@ -31,37 +34,48 @@ body{
         justify-content: space-between;
         gap: 1rem;
         width: 90%;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: auto auto;
         padding: 1rem;
+
+            p{
+            color:white;
+        }
 
         .card {
             border-radius: 0.5rem;
             padding: 1rem;
             background: linear-gradient(
-                30deg,
-                #eb1719 0%,
-                #eb1719 42%,
-                #1c4571 42%,
-                #1c4571 45%,
-                #eb1719 45%,
-                #eb1719 48%,
-                #1c4571 48%,
-                #1c4571 51%,
-                #eb1719 51%,
-                #eb1719 54%,
-                #1c4571 54%,
-                #1c4571 57%,
-                #eb1719 57%,
-                #eb1719 60%,
-                #1c4571 60%,
-                #1c4571 100%
-            );
+                -35deg,
+                #2f0498 0%,
+                #2f0498 42%,
+                #040405 42%,
+                #8d5df7 45%,
+                #2f0498 45%,
+                #2f0498 48%,
+                #8d5df7 48%,
+                #040405 51%,
+                #2f0498 51%,
+                #2f0498 54%,
+                #8d5df7 54%,
+                #040405 57%,
+                #2f0498 57%,
+                #2f0498 60%,
+                #040405 60%,
+                #040405 100%
+            ); 
+
+            /* 
+            2f0498
+            040405
+            8d5df7
+            */
+
             background-size: 300%;
             box-shadow: 2px 3px 5px white;
             transition: 0.5s ease-in-out;
 
             .cardTitle {
-                color: white;
+                color: #8d5df7;
                 transition: 0.3s ease-in-out;
                 font-size: 1.5rem;
                 font-weight: 500;
@@ -70,12 +84,17 @@ body{
 
             &:hover {
                 animation: colorChange 0.3s ease-in-out;
-                box-shadow: 3px 5px 5px #eb1719;
+                box-shadow: 3px 5px 5px #2f0498;
                 background-position: 100%;
 
                 .cardTitle {
-                    color: #eb1719;
+                    color: white;
+                    font-size: 1.7rem;
                     font-weight: 700;
+                }
+
+                .description{
+                    font-size: 1.2rem;
                 }
             }
         }
